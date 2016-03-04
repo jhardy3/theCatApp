@@ -7,17 +7,29 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController, NSXMLParserDelegate {
     
     var catImages = [UIImage]()
     var catURLs = [String]()
+    var currentURL: String = ""
+    var backgroundImage: UIImage?
     
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var catImageBackground: UIImageView!
     @IBOutlet weak var catImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let backgroundImage = UIImage(named: "PaulCat") {
+            catImageBackground.image = backgroundImage
+        }
+        
+        
+        
         setupCatView()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,6 +43,9 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         }
     }
     
+    @IBAction func catURLTapped(sender: UIBarButtonItem) {
+        presentSafarPage()
+    }
     
     
     func setupCatView() {
@@ -38,7 +53,8 @@ class ViewController: UIViewController, NSXMLParserDelegate {
             self.catImages.appendContentsOf(image)
             self.catURLs.appendContentsOf(imageUrl)
             self.catImageView.image = self.catImages.removeFirst()
-            self.urlLabel.text = self.catURLs.removeFirst()
+            self.currentURL = self.catURLs.removeFirst()
+            self.catImageBackground.image = nil
         })
         
         InterCatController.fetchCatchURL(numberOfCats: 10, completion: { (image, imageUrl) -> Void in
@@ -50,10 +66,16 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         })
     }
     
+    func presentSafarPage() {
+        guard let url = NSURL(string: currentURL) else { return }
+        let catPage = SFSafariViewController.init(URL: url)
+        self.presentViewController(catPage, animated: true, completion: nil)
+    }
+    
     func createCatImageThreads() {
         let catImage = catImages.removeFirst()
         self.catImageView.image = catImage
-        self.urlLabel.text = self.catURLs.removeFirst()
+        self.currentURL = self.catURLs.removeFirst()
         if catImages.count < 10 {
             InterCatController.fetchCatchURL(numberOfCats: 30, completion: { (image, imageUrl) -> Void in
                 self.catImages.appendContentsOf(image)
