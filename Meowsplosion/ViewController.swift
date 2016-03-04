@@ -8,18 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, NSXMLParserDelegate {
+    
+    @IBOutlet weak var catImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        InterCatController.fetchCatchURL { (image) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.catImageView.image = image
+            })
+            
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func catButtons(sender: UIButton) {
+        InterCatController.fetchCatchURL { (image) -> Void in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.catImageView.image = image
+            })
+            
+        }
 
-
+    }
 }
 
