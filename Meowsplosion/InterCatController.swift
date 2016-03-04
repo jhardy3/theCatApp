@@ -14,20 +14,6 @@ import UIKit
 
 class InterCatController {
     
-    static func dataAtURL(completion: (returnedData: NSData?) -> Void) {
-        
-        guard let url = NSURL(string: "http://thecatapi.com/api/images/get?format=xml&results_per_page=20") else { return }
-        
-        let dataTask = NSURLSession.sharedSession().dataTaskWithURL(url) { (cats, _, error) -> Void in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-            completion(returnedData: cats)
-        }
-        dataTask.resume()
-    }
-    
-    
     static func fetchImageAtURL(imageURLString: String, completion: (image: UIImage?) -> Void) {
         
         print(imageURLString)
@@ -52,11 +38,11 @@ class InterCatController {
         }
         
     }
-
     
-    static func fetchCatchURL(completion: (image: UIImage) -> Void) {
-        var returnDefinition = ""
-        let baseUrl = "http://thecatapi.com/api/images/get?format=xml&results_per_page=1"
+    
+    static func fetchCatchURL(numberOfCats cats: Int, completion: (image: [UIImage]) -> Void) {
+        var returnDefinition = [String]()
+        let baseUrl = "http://thecatapi.com/api/images/get?format=xml&results_per_page=\(cats)"
         let request = NSMutableURLRequest(URL: NSURL(string: baseUrl)!)
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "GET"
@@ -68,19 +54,40 @@ class InterCatController {
                 print("dataTaskWithRequest error: \(error)")
                 return
             }
+            
             guard let data = data else { return }
             let xml = SWXMLHash.parse(data)
             
-            if let definition = xml["response"]["data"]["images"]["image"]["url"].element?.text {
-                print(definition)
-                returnDefinition = definition
-                // ...
+            var definition = xml["response"]["data"]["images"]["image"].all.map { elem in elem["url"].element!.text! }
+            
+            print(definition)
+            
+            for url in definition {
+                returnDefinition.append(String(url))
+            }
+            print(returnDefinition)
+            // ...
+            
+            var catImages = [UIImage]()
+            
+            let group = dispatch_group_create()
+            
+            
+            for image in definition {
+                dispatch_group_enter(group)
+                fetchImageAtURL(image) { (image) -> Void in
+                    
+                    guard let catImage = image else { return}
+                    catImages.append(catImage)
+                    dispatch_group_leave(group)
+                }
+                
             }
             
-            fetchImageAtURL(returnDefinition) { (image) -> Void in
-                guard let catImage = image else { print("stuck here") ; return}
-                completion(image: catImage)
-            }
+            dispatch_group_notify(group, dispatch_get_main_queue(), { () -> Void in
+                completion(image: catImages)
+            })
+            
         }
         task.resume()
     }
