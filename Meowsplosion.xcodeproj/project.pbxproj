@@ -12,7 +12,6 @@
 		74B981851C8927C70006D0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B981831C8927C70006D0FE /* Main.storyboard */; };
 		74B981871C8927C70006D0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74B981861C8927C70006D0FE /* Assets.xcassets */; };
 		74B9818A1C8927C70006D0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B981881C8927C70006D0FE /* LaunchScreen.storyboard */; };
-		74B981921C8928120006D0FE /* CatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981911C8928120006D0FE /* CatController.swift */; };
 		74B981941C89287C0006D0FE /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981931C89287C0006D0FE /* Cat.swift */; };
 		74B981961C89288E0006D0FE /* InterCatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981951C89288E0006D0FE /* InterCatController.swift */; };
 		74B9819A1C893C100006D0FE /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981991C893C100006D0FE /* SWXMLHash.swift */; };
@@ -26,7 +25,6 @@
 		74B981861C8927C70006D0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74B981891C8927C70006D0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74B9818B1C8927C70006D0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74B981911C8928120006D0FE /* CatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatController.swift; sourceTree = "<group>"; };
 		74B981931C89287C0006D0FE /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		74B981951C89288E0006D0FE /* InterCatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterCatController.swift; sourceTree = "<group>"; };
 		74B981991C893C100006D0FE /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
@@ -64,10 +62,9 @@
 			children = (
 				74B9817F1C8927C70006D0FE /* AppDelegate.swift */,
 				74B981811C8927C70006D0FE /* ViewController.swift */,
-				74B981911C8928120006D0FE /* CatController.swift */,
 				74B981931C89287C0006D0FE /* Cat.swift */,
-				74B981991C893C100006D0FE /* SWXMLHash.swift */,
 				74B981951C89288E0006D0FE /* InterCatController.swift */,
+				74B981991C893C100006D0FE /* SWXMLHash.swift */,
 				74B981831C8927C70006D0FE /* Main.storyboard */,
 				74B981861C8927C70006D0FE /* Assets.xcassets */,
 				74B981881C8927C70006D0FE /* LaunchScreen.storyboard */,
@@ -151,7 +148,6 @@
 				74B981941C89287C0006D0FE /* Cat.swift in Sources */,
 				74B9819A1C893C100006D0FE /* SWXMLHash.swift in Sources */,
 				74B981821C8927C70006D0FE /* ViewController.swift in Sources */,
-				74B981921C8928120006D0FE /* CatController.swift in Sources */,
 				74B981801C8927C70006D0FE /* AppDelegate.swift in Sources */,
 				74B981961C89288E0006D0FE /* InterCatController.swift in Sources */,
 			);

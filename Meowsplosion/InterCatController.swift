@@ -19,8 +19,8 @@ class InterCatController {
         print(imageURLString)
         if let url = NSURL(string: imageURLString) {
             
-            
             NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                
                 if let error = error {
                     print(error.localizedDescription)
                     completion(image: nil)
@@ -31,17 +31,15 @@ class InterCatController {
                     completion(image: image)
                 }
             })
-                
                 .resume()
         } else {
             completion(image: nil)
         }
-        
     }
     
     
     static func fetchCatchURL(numberOfCats cats: Int, completion: (image: [UIImage], imageURL: [String]) -> Void) {
-        var returnDefinition = [String]()
+        
         let baseUrl = "http://thecatapi.com/api/images/get?format=xml&results_per_page=\(cats)size=smalltype=jpg"
         let request = NSMutableURLRequest(URL: NSURL(string: baseUrl)!)
         let session = NSURLSession.sharedSession()
@@ -56,23 +54,14 @@ class InterCatController {
             }
             
             guard let data = data else { return }
+            
+            
             let xml = SWXMLHash.parse(data)
-            
-            var definition = xml["response"]["data"]["images"]["image"].all.map { elem in elem["url"].element!.text! }
-            
-            print(definition)
-            
-            for url in definition {
-                returnDefinition.append(String(url))
-            }
-            print(returnDefinition)
-            // ...
-            
+            let definition = xml["response"]["data"]["images"]["image"].all.map { elem in elem["url"].element!.text! }
+        
             var catImages = [UIImage]()
-            
             let group = dispatch_group_create()
-            
-            
+        
             for image in definition {
                 dispatch_group_enter(group)
                 fetchImageAtURL(image) { (image) -> Void in
@@ -81,15 +70,11 @@ class InterCatController {
                     catImages.append(catImage)
                     dispatch_group_leave(group)
                 }
-                
             }
-            
             dispatch_group_notify(group, dispatch_get_main_queue(), { () -> Void in
                 completion(image: catImages, imageURL: definition)
             })
-            
         }
         task.resume()
     }
-    
 }

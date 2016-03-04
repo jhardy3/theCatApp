@@ -49,7 +49,7 @@ class ViewController: UIViewController, NSXMLParserDelegate {
             self.catImageView.image = catImage
             self.urlLabel.text = self.catURLs.removeFirst()
             if catImages.count < 10 {
-                InterCatController.fetchCatchURL(numberOfCats: 20, completion: { (image, imageUrl) -> Void in
+                InterCatController.fetchCatchURL(numberOfCats: 60, completion: { (image, imageUrl) -> Void in
                     self.catImages.appendContentsOf(image)
                     self.catURLs.appendContentsOf(imageUrl)
                 })
