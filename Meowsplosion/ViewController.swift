@@ -20,7 +20,10 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     @IBOutlet weak var catImageView: UIImageView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
         if let backgroundImage = UIImage(named: "PaulCat") {
             catImageBackground.image = backgroundImage
@@ -44,7 +47,8 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     }
     
     @IBAction func catURLTapped(sender: UIBarButtonItem) {
-        presentSafarPage()
+        //        presentSafarPage()
+        createCatAlert()
     }
     
     
@@ -94,6 +98,18 @@ class ViewController: UIViewController, NSXMLParserDelegate {
                 self.catURLs.appendContentsOf(imageUrl)
             })
         }
+    }
+    
+    func createCatAlert() {
+        let alertController = UIAlertController(title: "Source URL for this cat!", message: currentURL, preferredStyle: .Alert)
+        let goThereAlert = UIAlertAction(title: "Go There!", style: .Default) { (_) -> Void in
+            self.presentSafarPage()
+        }
+        let alert = UIAlertAction(title: "Ok, cool!", style: .Default, handler: nil)
+        alertController.addAction(goThereAlert)
+        alertController.addAction(alert)
+        presentViewController(alertController, animated: true, completion: nil)
+        
     }
 }
 

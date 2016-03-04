@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cat Box-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Cat_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,40 +20,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-MD-jf9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eik-Ky-1M9">
+                                <rect key="frame" x="0.0" y="72" width="600" height="449"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="0T0-qD-I5W"/>
+                                    <constraint firstAttribute="height" constant="449" id="j58-S9-EHS"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-PQ-1Mn">
+                                <rect key="frame" x="0.0" y="529" width="600" height="71"/>
+                                <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="0.7284740691489362" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-We-2ZG">
-                                <rect key="frame" x="234" y="528" width="132" height="71"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <rect key="frame" x="222.5" y="528" width="155" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="Jkh-ku-dw4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="49"/>
                                 <state key="normal" title="Meow">
-                                    <color key="titleColor" red="0.85893456113873579" green="0.86950145536718937" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.058256797148375297" green="0.058648038639583316" blue="0.067756053664921434" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="catButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1y-qg-BdO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eik-Ky-1M9">
-                                <rect key="frame" x="0.0" y="72" width="600" height="456"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="0T0-qD-I5W"/>
-                                    <constraint firstAttribute="height" constant="456" id="j58-S9-EHS"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7c5-MD-jf9" secondAttribute="bottom" id="1tR-ji-s9X"/>
                             <constraint firstItem="Eik-Ky-1M9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3tg-uX-Hed"/>
+                            <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Nx-ta-yZI"/>
+                            <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="height" secondItem="e8S-We-2ZG" secondAttribute="height" id="9eV-GY-jjU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zfp-PQ-1Mn" secondAttribute="bottom" id="Crn-eg-r93"/>
                             <constraint firstItem="7c5-MD-jf9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HZp-MC-IsP"/>
                             <constraint firstItem="Eik-Ky-1M9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P34-tt-zLi"/>
                             <constraint firstAttribute="trailing" secondItem="Eik-Ky-1M9" secondAttribute="trailing" id="S2i-d8-kLv"/>
-                            <constraint firstItem="e8S-We-2ZG" firstAttribute="top" secondItem="Eik-Ky-1M9" secondAttribute="bottom" id="Urp-WN-QYd"/>
                             <constraint firstItem="e8S-We-2ZG" firstAttribute="centerX" secondItem="7c5-MD-jf9" secondAttribute="centerX" id="WC8-1T-GbA"/>
+                            <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bU4-mS-3bn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e8S-We-2ZG" secondAttribute="bottom" constant="1" id="eDI-1H-yf9"/>
                             <constraint firstAttribute="trailing" secondItem="7c5-MD-jf9" secondAttribute="trailing" id="eQ8-d2-j3q"/>
                             <constraint firstItem="7c5-MD-jf9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t7C-Io-oBB"/>
+                            <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="top" secondItem="Eik-Ky-1M9" secondAttribute="bottom" constant="8" id="vB2-WE-7h0"/>
+                            <constraint firstAttribute="trailing" secondItem="Zfp-PQ-1Mn" secondAttribute="trailing" id="wmf-Iz-4Rq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XvE-xK-Xr1">
+                    <navigationItem key="navigationItem" title="Cat Box" id="XvE-xK-Xr1">
                         <barButtonItem key="leftBarButtonItem" title="URL" id="227-j4-ehQ">
                             <connections>
                                 <action selector="catURLTapped:" destination="BYZ-38-t0r" id="waf-5n-69p"/>
