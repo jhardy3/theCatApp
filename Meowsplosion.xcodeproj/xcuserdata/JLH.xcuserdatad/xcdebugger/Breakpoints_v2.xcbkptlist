@@ -41,44 +41,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
+            filePath = "Meowsplosion/ViewController.swift"
+            timestampString = "478765755.646197"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "fetchImageAtURL(_:completion:)"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Meowsplosion.InterCatController.fetchImageAtURL (Meowsplosion.InterCatController.Type)(Swift.String, completion : (image : Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Meowsplosion.ViewController.viewDidLoad (Meowsplosion.ViewController)() -&gt; ()"
                   moduleName = "Meowsplosion"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/JLH/Desktop/Personal%20Projects/Meowsplosion/Meowsplosion/InterCatController.swift"
-                  timestampString = "478762870.23165"
+                  urlString = "file:///Users/JLH/Desktop/Personal%20Projects/Meowsplosion/Meowsplosion/ViewController.swift"
+                  timestampString = "478765847.900427"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "356">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "75">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static Meowsplosion.InterCatController.(fetchImageAtURL (Meowsplosion.InterCatController.Type) -&gt; (Swift.String, completion : (image : Swift.Optional&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  symbolName = "Meowsplosion.ViewController.(viewDidLoad (Meowsplosion.ViewController) -&gt; () -&gt; ()).(closure #1)"
                   moduleName = "Meowsplosion"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/JLH/Desktop/Personal%20Projects/Meowsplosion/Meowsplosion/InterCatController.swift"
-                  timestampString = "478762870.23186"
+                  urlString = "file:///Users/JLH/Desktop/Personal%20Projects/Meowsplosion/Meowsplosion/ViewController.swift"
+                  timestampString = "478765847.90067"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "44">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -89,13 +89,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
+            filePath = "Meowsplosion/ViewController.swift"
+            timestampString = "478765756.589064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchImageAtURL(_:completion:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,110 +105,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
+            filePath = "Meowsplosion/ViewController.swift"
+            timestampString = "478765759.000077"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "fetchImageAtURL(_:completion:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "fetchImageAtURL(_:completion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "fetchImageAtURL(_:completion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchImageAtURL(_:completion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Meowsplosion/InterCatController.swift"
-            timestampString = "478763378.675045"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "fetchCatchURL(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Meowsplosion.InterCatController.(fetchCatchURL (Meowsplosion.InterCatController.Type) -&gt; ((image : Swift.Array&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Meowsplosion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/JLH/Desktop/Personal%20Projects/Meowsplosion/Meowsplosion/InterCatController.swift"
-                  timestampString = "478762870.262202"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "861">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Meowsplosion.InterCatController.(fetchCatchURL (Meowsplosion.InterCatController.Type) -&gt; ((image : Swift.Array&lt;__ObjC.UIImage&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "Meowsplosion"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/JLH/Desktop/Personal%20Projects/Meowsplosion/Meowsplosion/InterCatController.swift"
-                  timestampString = "478762870.262399"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "69">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

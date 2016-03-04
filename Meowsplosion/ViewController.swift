@@ -11,19 +11,31 @@ import UIKit
 class ViewController: UIViewController, NSXMLParserDelegate {
     
     var catImages = [UIImage]()
+    var catURLs = [String]()
     
+    @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var catImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        InterCatController.fetchCatchURL(numberOfCats: 10, completion: { (image) -> Void in
+        
+        
+        InterCatController.fetchCatchURL(numberOfCats: 10, completion: { (image, imageUrl) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.catImages.appendContentsOf(image)
-                print(image)
+                self.catURLs.appendContentsOf(imageUrl)
                 self.catImageView.image = self.catImages.removeFirst()
+                self.urlLabel.text = self.catURLs.removeFirst()
             })
             
         })
+        
+        if catImages.count < 11 {
+            InterCatController.fetchCatchURL(numberOfCats: 20, completion: { (image, imageUrl) -> Void in
+                self.catImages.appendContentsOf(image)
+                self.catURLs.appendContentsOf(imageUrl)
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,9 +47,11 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         if catImages.count >= 1 {
             let catImage = catImages.removeFirst()
             self.catImageView.image = catImage
-            if catImages.count < 200 {
-                InterCatController.fetchCatchURL(numberOfCats: 20, completion: { (image) -> Void in
+            self.urlLabel.text = self.catURLs.removeFirst()
+            if catImages.count < 10 {
+                InterCatController.fetchCatchURL(numberOfCats: 20, completion: { (image, imageUrl) -> Void in
                     self.catImages.appendContentsOf(image)
+                    self.catURLs.appendContentsOf(imageUrl)
                 })
             }
         }

@@ -40,9 +40,9 @@ class InterCatController {
     }
     
     
-    static func fetchCatchURL(numberOfCats cats: Int, completion: (image: [UIImage]) -> Void) {
+    static func fetchCatchURL(numberOfCats cats: Int, completion: (image: [UIImage], imageURL: [String]) -> Void) {
         var returnDefinition = [String]()
-        let baseUrl = "http://thecatapi.com/api/images/get?format=xml&results_per_page=\(cats)"
+        let baseUrl = "http://thecatapi.com/api/images/get?format=xml&results_per_page=\(cats)size=smalltype=jpg"
         let request = NSMutableURLRequest(URL: NSURL(string: baseUrl)!)
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "GET"
@@ -85,7 +85,7 @@ class InterCatController {
             }
             
             dispatch_group_notify(group, dispatch_get_main_queue(), { () -> Void in
-                completion(image: catImages)
+                completion(image: catImages, imageURL: definition)
             })
             
         }
