@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Meowsplosion.xcodeproj">
+      location = "self:/Users/JLH/Desktop/Personal Projects/Meowsplosion/The Cat App.xcodeproj">
    </FileRef>
 </Workspace>
