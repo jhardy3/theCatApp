@@ -58,21 +58,23 @@ class InterCatController {
             
             let xml = SWXMLHash.parse(data)
             let definition = xml["response"]["data"]["images"]["image"].all.map { elem in elem["url"].element!.text! }
-        
+            var catURLArray = [String]()
+            
             var catImages = [UIImage]()
             let group = dispatch_group_create()
         
-            for image in definition {
+            for imageString in definition {
                 dispatch_group_enter(group)
-                fetchImageAtURL(image) { (image) -> Void in
+                fetchImageAtURL(imageString) { (image) -> Void in
                     
                     guard let catImage = image else { return}
+                    catURLArray.append(imageString)
                     catImages.append(catImage)
                     dispatch_group_leave(group)
                 }
             }
             dispatch_group_notify(group, dispatch_get_main_queue(), { () -> Void in
-                completion(image: catImages, imageURL: definition)
+                completion(image: catImages, imageURL: catURLArray)
             })
         }
         task.resume()
