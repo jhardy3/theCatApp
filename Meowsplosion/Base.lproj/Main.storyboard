@@ -81,7 +81,7 @@
                                 <action selector="catURLTapped:" destination="BYZ-38-t0r" id="waf-5n-69p"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="Sound" id="lhv-nH-4Q2">
+                        <barButtonItem key="rightBarButtonItem" image="SoundOff" id="lhv-nH-4Q2">
                             <connections>
                                 <action selector="toggleSoundTapped:" destination="BYZ-38-t0r" id="NIJ-Rm-26s"/>
                             </connections>
@@ -90,6 +90,8 @@
                     <connections>
                         <outlet property="catImageBackground" destination="7c5-MD-jf9" id="adj-Jl-tLQ"/>
                         <outlet property="catImageView" destination="Eik-Ky-1M9" id="HZ6-dT-IDH"/>
+                        <outlet property="muteButton" destination="lhv-nH-4Q2" id="CaI-Fu-CA9"/>
+                        <outlet property="urlButton" destination="227-j4-ehQ" id="H1U-OR-0ur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,6 +118,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Sound" width="29" height="29"/>
+        <image name="SoundOff" width="29" height="29"/>
     </resources>
 </document>

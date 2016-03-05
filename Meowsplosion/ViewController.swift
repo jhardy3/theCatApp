@@ -13,33 +13,39 @@ import iAd
 
 class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDelegate {
     
-    var clickCountrer = 0
+    // MARK: - Properties
     
+    // Ad Properties
+    var clickCountrer = 0
     var interAd = ADInterstitialAd()
     var interAdView: UIView = UIView()
-    
     var closeButton = UIButton(type: UIButtonType.System)
     
+    // Sound Properties
+    var soundIsOn = true
+    var audioPlayer: AVAudioPlayer!
+    
+    // Image Properties
     var catImages = [UIImage]()
     var catURLs = [String]()
     var currentImage: UIImage?
-    
-    var soundIsOn = true
-    
-    var audioPlayer: AVAudioPlayer!
-    
-    var currentURL: String = ""
     var backgroundImage: UIImage?
+    var currentURL: String = ""
     
+    // Outlet Properties
+    @IBOutlet weak var muteButton: UIBarButtonItem!
     @IBOutlet weak var catImageBackground: UIImageView!
     @IBOutlet weak var catImageView: UIImageView!
+    @IBOutlet weak var urlButton: UIBarButtonItem!
     
+    
+    // View Functions
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         self.createRoarSound()
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.boldSystemFontOfSize(23)], forState: .Normal)
         self.createCloseButton()
         
         if let backgroundImage = UIImage(named: "PaulCat") {
@@ -59,18 +65,30 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
         clickCountrer++
         if catImages.count >= 1 {
             self.createCatImageThreads()
-            if  returnRandomNumberWithRange(100) % 5 == 0 {
+            if  returnRandomNumberWithRange(100) % 20 == 0 {
                 self.createMeowSound()
             }
         }
         
+        
         if clickCountrer % 30 == 0 {
-            loadAd()
+            let myQueue = dispatch_queue_create("com.gcdstretch.ourqueue", nil)
+            dispatch_async(myQueue, { () -> Void in
+                self.loadAd()
+            })
+            
         }
     }
     
     @IBAction func toggleSoundTapped(sender: UIBarButtonItem) {
         self.soundIsOn = !soundIsOn
+        if soundIsOn {
+            guard let image = UIImage(named: "SoundOff") else { return }
+            self.muteButton.image = image
+        } else {
+            guard let image = UIImage(named: "Sound") else { return }
+            self.muteButton.image = image
+        }
     }
     
     @IBAction func catURLTapped(sender: UIBarButtonItem) {
@@ -212,6 +230,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     }
     
     func loadAd() {
+        NSThread.sleepForTimeInterval(4)
         interAd = ADInterstitialAd()
         interAd.delegate = self
     }
