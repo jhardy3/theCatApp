@@ -16,7 +16,8 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     // MARK: - Properties
     
     // Ad Properties
-    var clickCountrer = 0
+    var allowAdds = false
+    var clickCounter = 0
     var interAd = ADInterstitialAd()
     var interAdView: UIView = UIView()
     var closeButton = UIButton(type: UIButtonType.System)
@@ -62,7 +63,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     
     @IBAction func catButtons(sender: UIButton) {
         
-        clickCountrer++
+        clickCounter++
         if catImages.count >= 1 {
             self.createCatImageThreads()
             if  returnRandomNumberWithRange(100) % 20 == 0 {
@@ -71,7 +72,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
         }
         
         
-        if clickCountrer % 30 == 0 {
+        if clickCounter % 30 == 0 && allowAdds {
             let myQueue = dispatch_queue_create("com.gcdstretch.ourqueue", nil)
             dispatch_async(myQueue, { () -> Void in
                 self.loadAd()
