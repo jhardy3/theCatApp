@@ -38,6 +38,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     @IBOutlet weak var catImageBackground: UIImageView!
     @IBOutlet weak var catImageView: UIImageView!
     @IBOutlet weak var urlButton: UIBarButtonItem!
+    @IBOutlet weak var imageSaver: UIButton!
     
     
     // View Functions

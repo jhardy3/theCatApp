@@ -47,6 +47,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlZ-U3-Ok7" userLabel="Image Saver">
                                 <rect key="frame" x="0.0" y="56" width="600" height="465"/>
+                                <accessibility key="accessibilityConfiguration" identifier="imageSaver"/>
                                 <connections>
                                     <action selector="imageSaverTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LqO-PP-jJB"/>
                                 </connections>
@@ -90,6 +91,7 @@
                     <connections>
                         <outlet property="catImageBackground" destination="7c5-MD-jf9" id="adj-Jl-tLQ"/>
                         <outlet property="catImageView" destination="Eik-Ky-1M9" id="HZ6-dT-IDH"/>
+                        <outlet property="imageSaver" destination="WlZ-U3-Ok7" id="kOl-5f-V6w"/>
                         <outlet property="muteButton" destination="lhv-nH-4Q2" id="CaI-Fu-CA9"/>
                         <outlet property="urlButton" destination="227-j4-ehQ" id="H1U-OR-0ur"/>
                     </connections>
