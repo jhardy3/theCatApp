@@ -319,6 +319,7 @@
 				74B981901C8927C70006D0FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

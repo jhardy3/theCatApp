@@ -9,8 +9,16 @@
 import UIKit
 import SafariServices
 import AVFoundation
+import iAd
 
-class ViewController: UIViewController, NSXMLParserDelegate {
+class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDelegate {
+    
+    var clickCountrer = 0
+    
+    var interAd = ADInterstitialAd()
+    var interAdView: UIView = UIView()
+    
+    var closeButton = UIButton(type: UIButtonType.System)
     
     var catImages = [UIImage]()
     var catURLs = [String]()
@@ -32,6 +40,7 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         
         self.createRoarSound()
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        self.createCloseButton()
         
         if let backgroundImage = UIImage(named: "PaulCat") {
             catImageBackground.image = backgroundImage
@@ -46,11 +55,17 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     }
     
     @IBAction func catButtons(sender: UIButton) {
+        
+        clickCountrer++
         if catImages.count >= 1 {
             self.createCatImageThreads()
             if  returnRandomNumberWithRange(100) % 5 == 0 {
                 self.createMeowSound()
             }
+        }
+        
+        if clickCountrer % 30 == 0 {
+            loadAd()
         }
     }
     
@@ -179,11 +194,56 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         }
     }
     
+    func createCloseButton() {
+        closeButton.frame = CGRectMake(10, 10, 20, 20)
+        closeButton.layer.cornerRadius = 10
+        closeButton.setTitle("x", forState: .Normal)
+        closeButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        closeButton.backgroundColor = UIColor.whiteColor()
+        closeButton.layer.borderColor = UIColor.blackColor().CGColor
+        closeButton.layer.borderWidth = 1
+        closeButton.addTarget(self, action: "close:", forControlEvents: .TouchDown)
+    }
+    
+    func close(sender: UIButton) {
+        closeButton.removeFromSuperview()
+        interAdView.removeFromSuperview()
+        self.navigationController?.navigationBarHidden = false
+    }
+    
+    func loadAd() {
+        interAd = ADInterstitialAd()
+        interAd.delegate = self
+    }
+    
+    func interstitialAdDidLoad(interstitialAd: ADInterstitialAd!) {
+        interAdView = UIView()
+        interAdView.frame = self.view.bounds
+        self.navigationController?.navigationBarHidden = true
+        view.addSubview(interAdView)
+        
+        interAd.presentInView(interAdView)
+        UIViewController.prepareInterstitialAds()
+        
+        interAdView.addSubview(closeButton)
+    }
+    
+    func interstitialAdDidUnload(interstitialAd: ADInterstitialAd!) {
+    }
+    
+    func interstitialAd(interstitialAd: ADInterstitialAd!, didFailWithError error: NSError!) {
+        closeButton.removeFromSuperview()
+        interAdView.removeFromSuperview()
+    }
+    
+    
     func createCatActivity() {
         guard let currentImage = currentImage else { return }
         let activityController = UIActivityViewController(activityItems: [currentImage], applicationActivities: [])
         presentViewController(activityController, animated: true, completion: nil)
     }
 }
+
+
 
 
