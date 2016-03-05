@@ -8,11 +8,18 @@
 
 import UIKit
 import SafariServices
+import AVFoundation
 
 class ViewController: UIViewController, NSXMLParserDelegate {
     
     var catImages = [UIImage]()
     var catURLs = [String]()
+    var currentImage: UIImage?
+    
+    var soundIsOn = true
+    
+    var audioPlayer: AVAudioPlayer!
+    
     var currentURL: String = ""
     var backgroundImage: UIImage?
     
@@ -23,13 +30,12 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         
         super.viewDidLoad()
         
+        self.createRoarSound()
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
         if let backgroundImage = UIImage(named: "PaulCat") {
             catImageBackground.image = backgroundImage
         }
-        
-        
         
         setupCatView()
         
@@ -37,18 +43,33 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func catButtons(sender: UIButton) {
         if catImages.count >= 1 {
             self.createCatImageThreads()
+            if  returnRandomNumberWithRange(100) % 5 == 0 {
+                self.createMeowSound()
+            }
         }
     }
     
+    @IBAction func toggleSoundTapped(sender: UIBarButtonItem) {
+        self.soundIsOn = !soundIsOn
+    }
+    
     @IBAction func catURLTapped(sender: UIBarButtonItem) {
-        //        presentSafarPage()
         createCatAlert()
+    }
+    
+    @IBAction func imageSaverTapped(sender: UIButton) {
+        self.createCatActivity()
+    }
+    
+    
+    func returnRandomNumberWithRange(number: Int) -> Int {
+        let randomNumber = Int(arc4random_uniform(UInt32(number)))
+        return randomNumber
     }
     
     
@@ -56,7 +77,10 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         InterCatController.fetchCatchURL(numberOfCats: 2, completion: { (image, imageUrl) -> Void in
             self.catImages.appendContentsOf(image)
             self.catURLs.appendContentsOf(imageUrl)
-            self.catImageView.image = self.catImages.removeFirst()
+            
+            let catImage = self.catImages.removeFirst()
+            self.currentImage = catImage
+            self.catImageView.image = catImage
             self.currentURL = self.catURLs.removeFirst()
             self.catImageBackground.image = nil
         })
@@ -65,6 +89,7 @@ class ViewController: UIViewController, NSXMLParserDelegate {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.catImages.appendContentsOf(image)
                 self.catURLs.appendContentsOf(imageUrl)
+                self.createPurrSound()
             })
             
         })
@@ -78,24 +103,29 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     
     func createCatImageThreads() {
         let catImage = catImages.removeFirst()
+        
         self.catImageView.image = catImage
         self.currentURL = self.catURLs.removeFirst()
+        
         if catImages.count < 10 {
             InterCatController.fetchCatchURL(numberOfCats: 30, completion: { (image, imageUrl) -> Void in
                 self.catImages.appendContentsOf(image)
                 self.catURLs.appendContentsOf(imageUrl)
             })
         }
+        
         if catImages.count < 20 {
             InterCatController.fetchCatchURL(numberOfCats: 20, completion: { (image, imageUrl) -> Void in
                 self.catImages.appendContentsOf(image)
                 self.catURLs.appendContentsOf(imageUrl)
             })
         }
+        
         if catImages.count < 5 {
             InterCatController.fetchCatchURL(numberOfCats: 5, completion: { (image, imageUrl) -> Void in
                 self.catImages.appendContentsOf(image)
                 self.catURLs.appendContentsOf(imageUrl)
+                self.createPurrSound()
             })
         }
     }
@@ -105,11 +135,54 @@ class ViewController: UIViewController, NSXMLParserDelegate {
         let goThereAlert = UIAlertAction(title: "Go There!", style: .Default) { (_) -> Void in
             self.presentSafarPage()
         }
+        
         let alert = UIAlertAction(title: "Ok, cool!", style: .Default, handler: nil)
         alertController.addAction(goThereAlert)
         alertController.addAction(alert)
         presentViewController(alertController, animated: true, completion: nil)
         
+    }
+    
+    func createMeowSound() {
+        if soundIsOn {
+            
+            if let audioFilePath = NSBundle.mainBundle().pathForResource("meow", ofType: "mp3") {
+                let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
+                
+                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileURL)
+                audioPlayer.play()
+            }
+        }
+    }
+    
+    func createRoarSound() {
+        if soundIsOn {
+            
+            if let audioFilePath = NSBundle.mainBundle().pathForResource("roar", ofType: "mp3") {
+                let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
+                
+                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileURL)
+                audioPlayer.play()
+            }
+        }
+    }
+    
+    func createPurrSound() {
+        if soundIsOn {
+            
+            if let audioFilePath = NSBundle.mainBundle().pathForResource("purr", ofType: "mp3") {
+                let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
+                
+                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileURL)
+                audioPlayer.play()
+            }
+        }
+    }
+    
+    func createCatActivity() {
+        guard let currentImage = currentImage else { return }
+        let activityController = UIActivityViewController(activityItems: [currentImage], applicationActivities: [])
+        presentViewController(activityController, animated: true, completion: nil)
     }
 }
 

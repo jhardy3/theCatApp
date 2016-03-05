@@ -15,6 +15,9 @@
 		74B981941C89287C0006D0FE /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981931C89287C0006D0FE /* Cat.swift */; };
 		74B981961C89288E0006D0FE /* InterCatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981951C89288E0006D0FE /* InterCatController.swift */; };
 		74B9819A1C893C100006D0FE /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981991C893C100006D0FE /* SWXMLHash.swift */; };
+		74B9819C1C8A644C0006D0FE /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B9819B1C8A644C0006D0FE /* meow.mp3 */; };
+		74B9819E1C8A64510006D0FE /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B9819D1C8A64510006D0FE /* purr.mp3 */; };
+		74B981A01C8A64570006D0FE /* roar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B9819F1C8A64570006D0FE /* roar.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		74B981931C89287C0006D0FE /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		74B981951C89288E0006D0FE /* InterCatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterCatController.swift; sourceTree = "<group>"; };
 		74B981991C893C100006D0FE /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		74B9819B1C8A644C0006D0FE /* meow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meow.mp3; sourceTree = "<group>"; };
+		74B9819D1C8A64510006D0FE /* purr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = purr.mp3; sourceTree = "<group>"; };
+		74B9819F1C8A64570006D0FE /* roar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = roar.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +75,19 @@
 				74B981861C8927C70006D0FE /* Assets.xcassets */,
 				74B981881C8927C70006D0FE /* LaunchScreen.storyboard */,
 				74B9818B1C8927C70006D0FE /* Info.plist */,
+				74B981A11C8A64610006D0FE /* Sound Bites */,
 			);
 			path = Meowsplosion;
+			sourceTree = "<group>";
+		};
+		74B981A11C8A64610006D0FE /* Sound Bites */ = {
+			isa = PBXGroup;
+			children = (
+				74B9819F1C8A64570006D0FE /* roar.mp3 */,
+				74B9819D1C8A64510006D0FE /* purr.mp3 */,
+				74B9819B1C8A644C0006D0FE /* meow.mp3 */,
+			);
+			name = "Sound Bites";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B9818A1C8927C70006D0FE /* LaunchScreen.storyboard in Resources */,
+				74B9819E1C8A64510006D0FE /* purr.mp3 in Resources */,
 				74B981871C8927C70006D0FE /* Assets.xcassets in Resources */,
+				74B9819C1C8A644C0006D0FE /* meow.mp3 in Resources */,
+				74B981A01C8A64570006D0FE /* roar.mp3 in Resources */,
 				74B981851C8927C70006D0FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

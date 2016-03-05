@@ -45,6 +45,12 @@
                                     <action selector="catButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1y-qg-BdO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlZ-U3-Ok7" userLabel="Image Saver">
+                                <rect key="frame" x="0.0" y="72" width="600" height="449"/>
+                                <connections>
+                                    <action selector="imageSaverTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LqO-PP-jJB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -54,11 +60,15 @@
                             <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="height" secondItem="e8S-We-2ZG" secondAttribute="height" id="9eV-GY-jjU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zfp-PQ-1Mn" secondAttribute="bottom" id="Crn-eg-r93"/>
                             <constraint firstItem="7c5-MD-jf9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HZp-MC-IsP"/>
+                            <constraint firstItem="WlZ-U3-Ok7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JgX-Fb-mqI"/>
+                            <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="top" secondItem="WlZ-U3-Ok7" secondAttribute="bottom" constant="8" id="L60-3v-PkA"/>
                             <constraint firstItem="Eik-Ky-1M9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P34-tt-zLi"/>
                             <constraint firstAttribute="trailing" secondItem="Eik-Ky-1M9" secondAttribute="trailing" id="S2i-d8-kLv"/>
                             <constraint firstItem="e8S-We-2ZG" firstAttribute="centerX" secondItem="7c5-MD-jf9" secondAttribute="centerX" id="WC8-1T-GbA"/>
                             <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bU4-mS-3bn"/>
+                            <constraint firstItem="WlZ-U3-Ok7" firstAttribute="height" secondItem="Eik-Ky-1M9" secondAttribute="height" id="c9n-Ya-a4i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e8S-We-2ZG" secondAttribute="bottom" constant="1" id="eDI-1H-yf9"/>
+                            <constraint firstItem="WlZ-U3-Ok7" firstAttribute="width" secondItem="Eik-Ky-1M9" secondAttribute="width" id="eJN-4D-Jgt"/>
                             <constraint firstAttribute="trailing" secondItem="7c5-MD-jf9" secondAttribute="trailing" id="eQ8-d2-j3q"/>
                             <constraint firstItem="7c5-MD-jf9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="t7C-Io-oBB"/>
                             <constraint firstItem="Zfp-PQ-1Mn" firstAttribute="top" secondItem="Eik-Ky-1M9" secondAttribute="bottom" constant="8" id="vB2-WE-7h0"/>
@@ -71,7 +81,11 @@
                                 <action selector="catURLTapped:" destination="BYZ-38-t0r" id="waf-5n-69p"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="Sound" id="lhv-nH-4Q2"/>
+                        <barButtonItem key="rightBarButtonItem" image="Sound" id="lhv-nH-4Q2">
+                            <connections>
+                                <action selector="toggleSoundTapped:" destination="BYZ-38-t0r" id="NIJ-Rm-26s"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="catImageBackground" destination="7c5-MD-jf9" id="adj-Jl-tLQ"/>
