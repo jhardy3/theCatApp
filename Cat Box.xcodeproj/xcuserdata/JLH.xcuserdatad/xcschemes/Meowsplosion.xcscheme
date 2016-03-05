@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "74B9817B1C8927C70006D0FE"
                BuildableName = "The Cat App.app"
-               BlueprintName = "The Cat App"
-               ReferencedContainer = "container:The Cat App.xcodeproj">
+               BlueprintName = "Cat Box"
+               ReferencedContainer = "container:Cat Box.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74B9817B1C8927C70006D0FE"
             BuildableName = "The Cat App.app"
-            BlueprintName = "The Cat App"
-            ReferencedContainer = "container:The Cat App.xcodeproj">
+            BlueprintName = "Cat Box"
+            ReferencedContainer = "container:Cat Box.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74B9817B1C8927C70006D0FE"
             BuildableName = "The Cat App.app"
-            BlueprintName = "The Cat App"
-            ReferencedContainer = "container:The Cat App.xcodeproj">
+            BlueprintName = "Cat Box"
+            ReferencedContainer = "container:Cat Box.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "74B9817B1C8927C70006D0FE"
             BuildableName = "The Cat App.app"
-            BlueprintName = "The Cat App"
-            ReferencedContainer = "container:The Cat App.xcodeproj">
+            BlueprintName = "Cat Box"
+            ReferencedContainer = "container:Cat Box.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

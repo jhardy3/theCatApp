@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74B9817C1C8927C70006D0FE /* The Cat App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Cat App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B9817C1C8927C70006D0FE /* Cat Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B9817F1C8927C70006D0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B981811C8927C70006D0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74B981841C8927C70006D0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		74B9817D1C8927C70006D0FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74B9817C1C8927C70006D0FE /* The Cat App.app */,
+				74B9817C1C8927C70006D0FE /* Cat Box.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74B9817B1C8927C70006D0FE /* The Cat App */ = {
+		74B9817B1C8927C70006D0FE /* Cat Box */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74B9818E1C8927C70006D0FE /* Build configuration list for PBXNativeTarget "The Cat App" */;
+			buildConfigurationList = 74B9818E1C8927C70006D0FE /* Build configuration list for PBXNativeTarget "Cat Box" */;
 			buildPhases = (
 				74B981781C8927C70006D0FE /* Sources */,
 				74B981791C8927C70006D0FE /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "The Cat App";
+			name = "Cat Box";
 			productName = Meowsplosion;
-			productReference = 74B9817C1C8927C70006D0FE /* The Cat App.app */;
+			productReference = 74B9817C1C8927C70006D0FE /* Cat Box.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74B981771C8927C70006D0FE /* Build configuration list for PBXProject "The Cat App" */;
+			buildConfigurationList = 74B981771C8927C70006D0FE /* Build configuration list for PBXProject "Cat Box" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -122,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74B9817B1C8927C70006D0FE /* The Cat App */,
+				74B9817B1C8927C70006D0FE /* Cat Box */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +265,7 @@
 				INFOPLIST_FILE = Meowsplosion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TheCatApp;
-				PRODUCT_NAME = "The Cat App";
+				PRODUCT_NAME = "Cat Box";
 			};
 			name = Debug;
 		};
@@ -276,14 +276,14 @@
 				INFOPLIST_FILE = Meowsplosion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.TheCatApp;
-				PRODUCT_NAME = "The Cat App";
+				PRODUCT_NAME = "Cat Box";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74B981771C8927C70006D0FE /* Build configuration list for PBXProject "The Cat App" */ = {
+		74B981771C8927C70006D0FE /* Build configuration list for PBXProject "Cat Box" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B9818C1C8927C70006D0FE /* Debug */,
@@ -292,7 +292,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74B9818E1C8927C70006D0FE /* Build configuration list for PBXNativeTarget "The Cat App" */ = {
+		74B9818E1C8927C70006D0FE /* Build configuration list for PBXNativeTarget "Cat Box" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74B9818F1C8927C70006D0FE /* Debug */,

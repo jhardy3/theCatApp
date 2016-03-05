@@ -8,7 +8,7 @@
         <!--Cat Box-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Cat_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cat_Box" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,10 +30,10 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfp-PQ-1Mn">
                                 <rect key="frame" x="0.0" y="529" width="600" height="71"/>
-                                <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="0.7284740691489362" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="0.7284740691489362" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-We-2ZG">
-                                <rect key="frame" x="222.5" y="528" width="155" height="71"/>
+                                <rect key="frame" x="222" y="528" width="155" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="Jkh-ku-dw4"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                 <action selector="catURLTapped:" destination="BYZ-38-t0r" id="waf-5n-69p"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="lhv-nH-4Q2"/>
+                        <barButtonItem key="rightBarButtonItem" image="Sound" id="lhv-nH-4Q2"/>
                     </navigationItem>
                     <connections>
                         <outlet property="catImageBackground" destination="7c5-MD-jf9" id="adj-Jl-tLQ"/>
@@ -101,4 +101,7 @@
             <point key="canvasLocation" x="1137" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sound" width="29" height="29"/>
+    </resources>
 </document>
