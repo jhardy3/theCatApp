@@ -44,11 +44,13 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     @IBOutlet weak var catImageView: UIImageView!
     @IBOutlet weak var urlButton: UIBarButtonItem!
     @IBOutlet weak var imageSaver: UIButton!
+    @IBOutlet weak var meowButton: UIButton!
     
     
     // View Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         self.createRoarSound()
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
@@ -149,6 +151,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
         let catImage = catImages.removeFirst()
         
         self.catImageView.image = catImage
+        self.currentImage = catImage
         self.currentURL = self.catURLs.removeFirst()
         
         if catImages.count < 10 {

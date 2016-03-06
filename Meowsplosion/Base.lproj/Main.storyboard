@@ -92,6 +92,7 @@
                         <outlet property="catImageBackground" destination="7c5-MD-jf9" id="adj-Jl-tLQ"/>
                         <outlet property="catImageView" destination="Eik-Ky-1M9" id="HZ6-dT-IDH"/>
                         <outlet property="imageSaver" destination="WlZ-U3-Ok7" id="kOl-5f-V6w"/>
+                        <outlet property="meowButton" destination="e8S-We-2ZG" id="8iH-C0-agu"/>
                         <outlet property="muteButton" destination="lhv-nH-4Q2" id="CaI-Fu-CA9"/>
                         <outlet property="urlButton" destination="227-j4-ehQ" id="H1U-OR-0ur"/>
                     </connections>
