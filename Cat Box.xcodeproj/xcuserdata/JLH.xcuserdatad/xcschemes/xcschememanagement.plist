@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Meowsplosion.xcscheme</key>
+		<key>Cat Box Free.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Cat Box Full.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>74A930121C8BA3840099DB81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>74B9817B1C8927C70006D0FE</key>
 		<dict>
 			<key>primary</key>

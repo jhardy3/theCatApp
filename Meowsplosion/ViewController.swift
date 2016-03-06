@@ -16,11 +16,16 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     // MARK: - Properties
     
     // Ad Properties
-    var allowAdds = false
     var clickCounter = 0
     var interAd = ADInterstitialAd()
     var interAdView: UIView = UIView()
     var closeButton = UIButton(type: UIButtonType.System)
+    
+    #if FREE
+    let allowAdds = true
+    #else
+    let allowAdds = false
+    #endif
     
     // Sound Properties
     var soundIsOn = true
@@ -70,6 +75,8 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
             if  returnRandomNumberWithRange(100) % 20 == 0 {
                 self.createMeowSound()
             }
+        } else {
+            self.createHissSound()
         }
         
         
@@ -98,7 +105,9 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
     }
     
     @IBAction func imageSaverTapped(sender: UIButton) {
-        self.createCatActivity()
+        if !allowAdds {
+            self.createCatActivity()
+        }
     }
     
     
@@ -206,6 +215,18 @@ class ViewController: UIViewController, NSXMLParserDelegate, ADInterstitialAdDel
         if soundIsOn {
             
             if let audioFilePath = NSBundle.mainBundle().pathForResource("purr", ofType: "mp3") {
+                let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
+                
+                audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileURL)
+                audioPlayer.play()
+            }
+        }
+    }
+    
+    func createHissSound() {
+        if soundIsOn {
+            
+            if let audioFilePath = NSBundle.mainBundle().pathForResource("hiss", ofType: "mp3") {
                 let audioFileURL = NSURL(fileURLWithPath: audioFilePath)
                 
                 audioPlayer = try? AVAudioPlayer(contentsOfURL: audioFileURL)

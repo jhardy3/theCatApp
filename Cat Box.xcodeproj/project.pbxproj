@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74A930141C8BA3840099DB81 /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981991C893C100006D0FE /* SWXMLHash.swift */; };
+		74A930151C8BA3840099DB81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981811C8927C70006D0FE /* ViewController.swift */; };
+		74A930161C8BA3840099DB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9817F1C8927C70006D0FE /* AppDelegate.swift */; };
+		74A930171C8BA3840099DB81 /* InterCatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981951C89288E0006D0FE /* InterCatController.swift */; };
+		74A9301A1C8BA3840099DB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B981881C8927C70006D0FE /* LaunchScreen.storyboard */; };
+		74A9301B1C8BA3840099DB81 /* purr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B9819D1C8A64510006D0FE /* purr.mp3 */; };
+		74A9301C1C8BA3840099DB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74B981861C8927C70006D0FE /* Assets.xcassets */; };
+		74A9301D1C8BA3840099DB81 /* meow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B9819B1C8A644C0006D0FE /* meow.mp3 */; };
+		74A9301E1C8BA3840099DB81 /* roar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74B9819F1C8A64570006D0FE /* roar.mp3 */; };
+		74A9301F1C8BA3840099DB81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B981831C8927C70006D0FE /* Main.storyboard */; };
+		74A930261C8BA9060099DB81 /* hiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74A930251C8BA9060099DB81 /* hiss.mp3 */; };
+		74A930271C8BA9060099DB81 /* hiss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 74A930251C8BA9060099DB81 /* hiss.mp3 */; };
 		74B981801C8927C70006D0FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9817F1C8927C70006D0FE /* AppDelegate.swift */; };
 		74B981821C8927C70006D0FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B981811C8927C70006D0FE /* ViewController.swift */; };
 		74B981851C8927C70006D0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B981831C8927C70006D0FE /* Main.storyboard */; };
@@ -32,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74A930231C8BA3840099DB81 /* Cat Box Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Box Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A930241C8BA3840099DB81 /* Cat Box Free.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Cat Box Free.plist"; path = "/Users/JLH/Desktop/Personal Projects/Meowsplosion/Cat Box Free.plist"; sourceTree = "<absolute>"; };
+		74A930251C8BA9060099DB81 /* hiss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hiss.mp3; sourceTree = "<group>"; };
 		74B9817C1C8927C70006D0FE /* Cat Box.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cat Box.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B9817F1C8927C70006D0FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B981811C8927C70006D0FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +66,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		74A930181C8BA3840099DB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74B981791C8927C70006D0FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +96,7 @@
 				74B9817E1C8927C70006D0FE /* Meowsplosion */,
 				74B981A91C8AC55A0006D0FE /* Cat BoxUITests */,
 				74B9817D1C8927C70006D0FE /* Products */,
+				74A930241C8BA3840099DB81 /* Cat Box Free.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +105,7 @@
 			children = (
 				74B9817C1C8927C70006D0FE /* Cat Box.app */,
 				74B981A81C8AC55A0006D0FE /* Cat BoxUITests.xctest */,
+				74A930231C8BA3840099DB81 /* Cat Box Free.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +131,7 @@
 			children = (
 				74B9819F1C8A64570006D0FE /* roar.mp3 */,
 				74B9819D1C8A64510006D0FE /* purr.mp3 */,
+				74A930251C8BA9060099DB81 /* hiss.mp3 */,
 				74B9819B1C8A644C0006D0FE /* meow.mp3 */,
 			);
 			name = "Sound Bites";
@@ -125,6 +150,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		74A930121C8BA3840099DB81 /* Cat Box Free */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A930201C8BA3840099DB81 /* Build configuration list for PBXNativeTarget "Cat Box Free" */;
+			buildPhases = (
+				74A930131C8BA3840099DB81 /* Sources */,
+				74A930181C8BA3840099DB81 /* Frameworks */,
+				74A930191C8BA3840099DB81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cat Box Free";
+			productName = Meowsplosion;
+			productReference = 74A930231C8BA3840099DB81 /* Cat Box Free.app */;
+			productType = "com.apple.product-type.application";
+		};
 		74B9817B1C8927C70006D0FE /* Cat Box */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74B9818E1C8927C70006D0FE /* Build configuration list for PBXNativeTarget "Cat Box" */;
@@ -170,6 +212,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jake Hardy";
 				TargetAttributes = {
+					74A930121C8BA3840099DB81 = {
+						DevelopmentTeam = 84RFPT2YUF;
+					};
 					74B9817B1C8927C70006D0FE = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 84RFPT2YUF;
@@ -195,15 +240,31 @@
 			targets = (
 				74B9817B1C8927C70006D0FE /* Cat Box */,
 				74B981A71C8AC55A0006D0FE /* Cat BoxUITests */,
+				74A930121C8BA3840099DB81 /* Cat Box Free */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		74A930191C8BA3840099DB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A930271C8BA9060099DB81 /* hiss.mp3 in Resources */,
+				74A9301A1C8BA3840099DB81 /* LaunchScreen.storyboard in Resources */,
+				74A9301B1C8BA3840099DB81 /* purr.mp3 in Resources */,
+				74A9301C1C8BA3840099DB81 /* Assets.xcassets in Resources */,
+				74A9301D1C8BA3840099DB81 /* meow.mp3 in Resources */,
+				74A9301E1C8BA3840099DB81 /* roar.mp3 in Resources */,
+				74A9301F1C8BA3840099DB81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74B9817A1C8927C70006D0FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A930261C8BA9060099DB81 /* hiss.mp3 in Resources */,
 				74B9818A1C8927C70006D0FE /* LaunchScreen.storyboard in Resources */,
 				74B9819E1C8A64510006D0FE /* purr.mp3 in Resources */,
 				74B981871C8927C70006D0FE /* Assets.xcassets in Resources */,
@@ -223,6 +284,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		74A930131C8BA3840099DB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A930141C8BA3840099DB81 /* SWXMLHash.swift in Sources */,
+				74A930151C8BA3840099DB81 /* ViewController.swift in Sources */,
+				74A930161C8BA3840099DB81 /* AppDelegate.swift in Sources */,
+				74A930171C8BA3840099DB81 /* InterCatController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74B981781C8927C70006D0FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +345,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		74A930211C8BA3840099DB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Cat Box Free.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DFREE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CatBoxAppFree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		74A930221C8BA3840099DB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "$(SRCROOT)/Cat Box Free.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DFREE";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CatBoxAppFree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		74B9818C1C8927C70006D0FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -409,6 +509,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		74A930201C8BA3840099DB81 /* Build configuration list for PBXNativeTarget "Cat Box Free" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A930211C8BA3840099DB81 /* Debug */,
+				74A930221C8BA3840099DB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		74B981771C8927C70006D0FE /* Build configuration list for PBXProject "Cat Box" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

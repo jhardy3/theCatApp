@@ -34,8 +34,6 @@ class Cat_BoxUITests: XCTestCase {
     func testExample() {
         let buttons = XCUIApplication().buttons
         let secondButton = buttons.elementBoundByIndex(4)
-        let firstButton = buttons.elementMatchingType(.Button, identifier: "imageSaver")
-        
     
         snapshot("portraitCat")
         NSThread.sleepForTimeInterval(9)
@@ -44,8 +42,6 @@ class Cat_BoxUITests: XCTestCase {
         snapshot("CatImage")
         sleep(2)
         
-        firstButton.tap()
-        snapshot("save")
         
     }
     
