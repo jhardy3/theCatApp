@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "8160ca6c4331b5592b27430356d8d899"
+build_time: [513285429, 186455000]
+inputs:
+  "/Users/JLH/Desktop/Personal Projects/Meowsplosion/Meowsplosion/SWXMLHash.swift": [510377738, 0]
+  "/Users/JLH/Desktop/Personal Projects/Meowsplosion/Meowsplosion/ViewController.swift": [510545211, 0]
+  "/Users/JLH/Desktop/Personal Projects/Meowsplosion/Meowsplosion/AppDelegate.swift": [510479364, 0]
+  "/Users/JLH/Desktop/Personal Projects/Meowsplosion/Meowsplosion/InterCatController.swift": [510460130, 0]
